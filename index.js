@@ -14,7 +14,9 @@ app.use(cookieParser());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://127.0.0.1:27017/secretsDB");
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.error(err));
 
 const userSchema = new mongoose.Schema({
   name: String,
