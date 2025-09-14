@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form action="/register" method="POST">
+      <input type="text" name="name" placeholder="Name" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <small style="color: rgb(157, 165, 95);">Password-Example: Test@1234</small><br>
+      <input type="checkbox" onclick="togglePassword()"> Show Password <br>
+      <button type="submit">Register</button>
+      <p style="color:rgb(9, 188, 237);"><%= error %></p>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
