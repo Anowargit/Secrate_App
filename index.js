@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 
 
 const app = express();
-const port = process.env.PORT || 3300;
+const port = process.env.PORT || 3000;
 
 const secretKey = process.env.JWT_SECRET || "my-secret-key";
 
