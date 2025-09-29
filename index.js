@@ -16,7 +16,7 @@ app.use(express.static("public"));
 app.use(cookieParser());
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://localhost:27017/secrets-app", {
+mongoose.connect("process.env.MONGO_URI", {
     serverSelectionTimeoutMS: 5000,
     socketTimeoutMS: 45000,
 })
